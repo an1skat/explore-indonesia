@@ -1,0 +1,240 @@
+:root {
+  --accent-color: rgb(221, 34, 66);
+  --text-color: rgb(224, 224, 224);
+}
+@counter-style numbers-not-point {
+  system: fixed;
+  symbols: "01" "02" "03" "04" "05" "06" "07" "08" "09" "10" "11" "12" "13";
+  suffix: " ";
+}
+body {
+  font-family: "DM Sans";
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+.btn {
+  border: none;
+  background-color: var(--accent-color);
+  padding: 22.5px 108px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 40px;
+  transition: background-color 250ms, color 250ms;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--accent-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 375px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  padding: 48px 0;
+}
+.header > .container,
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.nav {
+  display: none;
+}
+.icons-container {
+  gap: 20px;
+  align-items: center;
+}
+.icons-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  padding: 153px 0 40px;
+  background: linear-gradient(
+      192.53deg,
+      rgba(0, 0, 0, 0.31) 20.027%,
+      rgba(0, 0, 0, 0.29) 99.033%
+    ),
+    url("./images/hero-bg-mob.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-title {
+  color: white;
+  font-family: Roboto;
+  font-size: 58.15px;
+  line-height: 63px;
+}
+.hero-btn {
+  padding: 21.5px 90.5px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.hero-list {
+  list-style: none;
+  counter-reset: custom-counter;
+  padding: 35px 72px 30px 32px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 54px;
+  margin-bottom: 0;
+}
+.hero-list-item {
+  counter-increment: custom-counter;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hero-list-item::before {
+  content: counter(custom-counter, decimal-leading-zero);
+  color: var(--accent-color);
+  font-family: "Roboto";
+  line-height: 19px;
+}
+.hero-list-title {
+  color: white;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 41px;
+}
+.hero-list-text {
+  color: rgb(147, 147, 147);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.hero-video {
+  background-image: url("./images/hero-video-mob.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 66px 128px;
+}
+.hero-video-btn {
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  padding: 21px 20px 19px 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.hero-triangle {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid black;
+}
+
+/* ADVANTAGES */
+.advantage {
+  padding: 0 30px;
+}
+.advantage:first-child {
+  padding-top: 40px;
+  background: linear-gradient(
+      0deg,
+      rgb(1, 10, 32) 0%,
+      rgba(1, 10, 32, 0.9) 100%
+    ),
+    url("./images/advantage1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.advantage:last-child {
+  padding: 56px 30px 48px;
+  background: linear-gradient(
+      180deg,
+      rgb(1, 10, 32) 0%,
+      rgba(1, 10, 32, 0.9) 100%
+    ),
+    url("./images/advantage2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.advantage-img {
+  width: 314px;
+  height: 232px;
+  border-radius: 5px;
+}
+.advantage-title {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 34px;
+}
+.advantage-text {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 30px;
+}
+.advantage-btn {
+  margin-top: 39px;
+}

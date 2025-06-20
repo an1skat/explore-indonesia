@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+	<symbol id="icon-search" viewBox="0 0 32 32">
+		<g filter="url(#filter0_d_1_339)">
+			<g clip-path="url(#clip0_1_339)">
+				<path d="M19.5 18H18.71L18.43 17.73C19.41 16.59 20 15.11 20 13.5C20 9.91 17.09 7 13.5 7C9.91 7 7 9.91 7 13.5C7 17.09 9.91 20 13.5 20C15.11 20 16.59 19.41 17.73 18.43L18 18.71V19.5L23 24.49L24.49 23L19.5 18ZM13.5 18C11.01 18 9 15.99 9 13.5C9 11.01 11.01 9 13.5 9C15.99 9 18 11.01 18 13.5C18 15.99 15.99 18 13.5 18Z" fill="white" />
+			</g>
+		</g>
+		<defs>
+			<filter id="filter0_d_1_339" x="0" y="0" width="32.0125" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+				<feOffset />
+				<feGaussianBlur stdDeviation="2" />
+				<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+				<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_339" />
+				<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_339" result="shape" />
+			</filter>
+			<clipPath id="clip0_1_339">
+				<rect width="24" height="24" fill="white" transform="translate(4 4)" />
+			</clipPath>
+		</defs>
+	</symbol>
+	<symbol id="icon-menu" viewBox="0 0 27 24">
+		<g clip-path="url(#clip0_1_343)" filter="url(#filter0_d_1_343)">
+			<path d="M4.03491 18H22.0443V16H4.03491V18ZM4.03491 13H22.0443V11H4.03491V13ZM4.03491 6V8H22.0443V6H4.03491Z" fill="white" />
+		</g>
+		<defs>
+			<filter id="filter0_d_1_343" x="-2.96667" y="-4" width="32.0125" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+				<feOffset />
+				<feGaussianBlur stdDeviation="2" />
+				<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+				<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_343" />
+				<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_343" result="shape" />
+			</filter>
+			<clipPath id="clip0_1_343">
+				<rect width="24.0125" height="24" fill="white" transform="translate(1.03333)" />
+			</clipPath>
+		</defs>
+	</symbol>
+</svg>
