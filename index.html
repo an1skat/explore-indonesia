@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Roboto:ital,wght@0,900;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -34,14 +38,14 @@
         </nav>
         <div class="icons-container">
           <button class="icons-btn" type="button">
-            <svg width="32" height="32">
-              <use href="./images/icons.svg#icon-search"></use>
-            </svg>
+            <img
+              src="./images/search.svg"
+              alt="Search svg"
+              class="header-img"
+            />
           </button>
           <button class="icons-btn" type="button">
-            <svg width="27" height="24">
-              <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
+            <img src="./images/menu.svg" alt="Menu svg" class="header-img" />
           </button>
         </div>
       </div>
@@ -99,7 +103,7 @@
         </div>
         <div class="advantage">
           <img
-            src="./images/advantage1.jpg"
+            src="./images/advantage2.jpg"
             alt="Second advantage image"
             class="advantage-img"
           />
@@ -115,7 +119,307 @@
           </div>
         </div>
       </section>
+      <section class="slider">
+        <h2 class="slider-title">Explore Our Secrets</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="./images/swiper-img1.jpg"
+                alt="Slider image 1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="./images/swiper-img2.jpg"
+                alt="Slider image 2"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="./images/swiper-img3.jpg"
+                alt="Slider image 3"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="./images/hero-video.jpg"
+                alt="Slider image 4"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="./images/advantage1.jpg"
+                alt="Slider image 5"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="swiper-img"
+                src="./images/advantage2.jpg"
+                alt="Slider image 6"
+              />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="numbers-container">
+          <h3 class="numbers-title">By The Numbers</h3>
+          <p class="numbers-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            commodo magna et libero.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <ul class="numbers-list list">
+            <li class="numbers-list-item">
+              <h4 class="numbers-list-title">100+</h4>
+              <p class="numbers-list-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                commodo magna et libero.
+              </p>
+            </li>
+            <li class="numbers-list-item mt-81">
+              <h4 class="numbers-list-title">43,000+</h4>
+              <p class="numbers-list-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                commodo.
+              </p>
+            </li>
+            <li class="numbers-list-item mt-44">
+              <h4 class="numbers-list-title">30+</h4>
+              <p class="numbers-list-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                commodo magna et libero.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="container">
+          <h2 class="benefits-title">
+            Our hills and valleys are like nothing you’ve seen.
+          </h2>
+          <p class="benefits-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit
+            amet magna commodo, tempus dolor sit amet, laoreet elit. Donec
+            mauris tortor, elementum sed.
+          </p>
+          <button type="button" class="benefits-btn btn">Learn More</button>
+        </div>
+      </section>
+      <section class="experience">
+        <div class="container">
+          <h2 class="experience-title">
+            Live a life like you wouldn’t imagine, experience a life you
+            wouldn’t expect.
+          </h2>
+          <div class="experience-video">
+            <button class="hero-video-btn experience-video-btn" type="button">
+              <div class="hero-triangle experience-triangle"></div>
+            </button>
+          </div>
+          <ul class="experience-list list">
+            <li class="experience-list-item">
+              <div class="experience-img-container">
+                <img
+                  src="./images/experience-img1.jpg"
+                  alt="First experience image"
+                  class="experience-img"
+                />
+                <div class="hero-triangle experience-triangle abs"></div>
+              </div>
+              <div class="experience-list-info">
+                <h3 class="experience-list-title">In The Country</h3>
+                <p class="experience-list-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus dapibus mauris in lectus tempus.
+                </p>
+              </div>
+            </li>
+            <li class="experience-list-item">
+              <div class="experience-img-container">
+                <img
+                  src="./images/experience-img2.jpg"
+                  alt="Second experience image"
+                  class="experience-img"
+                />
+                <div class="hero-triangle experience-triangle abs"></div>
+              </div>
+              <div class="experience-list-info">
+                <h3 class="experience-list-title">In The City</h3>
+                <p class="experience-list-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Phasellus dapibus mauris in.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="container">
+          <h2 class="gallery-title">Photo Gallery</h2>
+          <p class="gallery-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            dapibus mauris in lectus tempus, eget tincidunt.
+          </p>
+          <ul class="gallery-list list">
+            <li class="gallery-list-item">
+              <img
+                src="./images/gallery-img1.jpg"
+                alt="First gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-list-item">
+              <img
+                src="./images/gallery-img2.jpg"
+                alt="Second gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-list-item">
+              <img
+                src="./images/gallery-img3.jpg"
+                alt="Third gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-list-item">
+              <img
+                src="./images/gallery-img4.jpg"
+                alt="Fourth gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-list-item">
+              <img
+                src="./images/gallery-img5.jpg"
+                alt="Fifth gallery image"
+                class="gallery-img"
+              />
+            </li>
+            <li class="gallery-list-item">
+              <img
+                src="./images/gallery-img6.jpg"
+                alt="Sixth gallery image"
+                class="gallery-img"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="tips">
+        <div class="container">
+          <h2 class="tips-title">Getting there</h2>
+          <ol class="tips-list">
+            <li class="tips-list-item">
+              <h3 class="tips-list-title">Booking your flights</h3>
+              <p class="tips-list-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus
+                varius. Sed euismod orci dictum faucibus malesuada. Praesent sed
+                eros tincidunt, viverra neque auctor, lobortis enim.
+              </p>
+              <button type="button" class="show-more">Show more</button>
+            </li>
+            <li class="tips-list-item">
+              <h3 class="tips-list-title">Choosing your hotel</h3>
+              <p class="tips-list-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus
+                varius. Sed euismod orci dictum faucibus malesuada. Praesent sed
+                eros tincidunt, viverra neque auctor, lobortis enim.
+              </p>
+              <button type="button" class="show-more">Show more</button>
+              <div class="tips-list-container">
+                <div class="tips-img-container">
+                  <img
+                    src="./images/tips-img.jpg"
+                    alt="Motorbike image"
+                    class="tips-img"
+                  />
+                  <div class="hero-triangle experience-triangle abs"></div>
+                </div>
+                <div class="tips-info-container">
+                  <h3 class="tips-list-title hidden">Travelling there</h3>
+                  <p class="tips-list-text mt-40">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus dapibus mauris in lectus tempus, eget tincidunt.
+                  </p>
+                  <button type="button" class="show-more">Show more</button>
+                </div>
+              </div>
+            </li>
+            <li class="tips-list-item">
+              <h3 class="tips-list-title">Planning your experiences</h3>
+              <p class="tips-list-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus
+                varius. Sed euismod orci dictum faucibus malesuada. Praesent sed
+                eros tincidunt, viverra neque auctor, lobortis enim.
+              </p>
+              <button type="button" class="show-more">Show more</button>
+            </li>
+          </ol>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <button id="scrollToTopBtn" type="button" class="scroll-to-up">
+          <img class="arrow" src="./images/arrow.svg" alt="Arrow" />
+        </button>
+        <img src="./images/footerLogo.svg" alt="Logotype" class="footer-logo" />
+        <ul class="footer-nav-list list">
+          <li class="footer-nav-item">About</li>
+          <li class="footer-nav-item">Pricing</li>
+          <li class="footer-nav-item">Company</li>
+          <li class="footer-nav-item">Blog</li>
+        </ul>
+        <ul class="footer-links-list list">
+          <li class="footer-links-item">
+            <a href="https://facebook.com" class="footer-link" target="_blank">
+              <img
+                src="./images/Facebook.svg"
+                alt="Facebook svg"
+                class="footer-img"
+              />
+            </a>
+          </li>
+          <li class="footer-links-item">
+            <a href="https://linkedin.com" class="footer-link" target="_blank">
+              <img
+                src="./images/Linkedin.svg"
+                alt="Linkedin svg"
+                class="footer-img"
+              />
+            </a>
+          </li>
+          <li class="footer-links-item">
+            <a href="https://google.com" class="footer-link" target="_blank">
+              <img
+                src="./images/Google.svg"
+                alt="Google svg"
+                class="footer-img"
+              />
+            </a>
+          </li>
+        </ul>
+        <p class="footer-copyright">Copyright &copy; 2019</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>
