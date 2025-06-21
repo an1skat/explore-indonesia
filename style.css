@@ -266,6 +266,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 .slider-title,
 .numbers-title,
@@ -280,7 +282,8 @@ span {
 }
 .swiper {
   margin-top: 23px;
-  overflow: visible;
+  width: 100%;
+  overflow: hidden;
 }
 .swiper-button-prev {
   color: #020b20;
@@ -298,7 +301,9 @@ span {
   font-weight: 1000;
 }
 .swiper-pagination {
-  top: 216px !important;
+  top: auto !important;
+  bottom: auto !important;
+  margin-top: 16px;
 }
 .swiper-pagination-bullet {
   width: 16.48px;
@@ -381,6 +386,9 @@ span {
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0.54)),
     url("./images/experience-bg-mob.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .experience-title {
   color: white;
