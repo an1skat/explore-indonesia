@@ -9,7 +9,12 @@
 }
 body {
   font-family: "DM Sans";
+}
+html,
+body {
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 h1,
 h2,
