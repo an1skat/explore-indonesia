@@ -1,6 +1,7 @@
 // Swiper
 const swiper = new Swiper(".swiper", {
   loop: true,
+  slidesPerView: 1,
 
   pagination: {
     el: ".swiper-pagination",
@@ -10,6 +11,13 @@ const swiper = new Swiper(".swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    1420: {
+      slidesPerView: 3,
+      spaceBetween: 31,
+    },
   },
 });
 

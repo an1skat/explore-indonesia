@@ -103,7 +103,7 @@ img {
   justify-content: space-between;
   align-items: flex-start;
 }
-.nav {
+.nav-list {
   display: none;
 }
 .icons-container {
@@ -223,7 +223,8 @@ img {
   background-repeat: no-repeat;
 }
 .advantage:last-child {
-  padding: 56px 30px 48px;
+  padding-top: 56px;
+  padding-bottom: 48px;
   background: linear-gradient(
       180deg,
       rgb(1, 10, 32) 0%,
@@ -237,7 +238,7 @@ img {
 .advantage-img {
   width: 314px;
   height: 232px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .advantage-title {
   color: white;
@@ -268,6 +269,7 @@ img {
   text-align: center;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .slider-title,
 .numbers-title,
@@ -287,12 +289,12 @@ span {
 }
 .swiper-button-prev {
   color: #020b20;
-  left: 0 !important;
+  /* left: 0 !important; */
   transition: color 250ms;
 }
 .swiper-button-next {
   color: #020b20;
-  right: 0 !important;
+  /* right: 0 !important; */
   transition: color 250ms;
 }
 .swiper-button-prev::after,
@@ -494,6 +496,7 @@ span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* TIPS */
@@ -615,4 +618,261 @@ span {
   font-weight: 700;
   line-height: 36.15px;
   letter-spacing: 0.65px;
+}
+@media (min-width: 1420px) {
+  .header {
+    width: 100%;
+  }
+  .container {
+    width: 1490px;
+  }
+  .header > .container {
+    width: 100%;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+  .nav-list {
+    display: flex;
+    gap: 62.1px;
+  }
+  .nav-list-item {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    cursor: pointer;
+  }
+
+  .hero {
+    padding: 0;
+    padding-top: 266px;
+    background: linear-gradient(
+        192.53deg,
+        rgba(0, 0, 0, 0.31) 20.027%,
+        rgba(0, 0, 0, 0.29) 99.033%
+      ),
+      url("./images/hero-bg-desk.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero-title {
+    font-size: 120px;
+    line-height: 130px;
+  }
+  .hero-btn {
+    padding: 26px 64px;
+    font-size: 20px;
+    line-height: 150%;
+    height: 82px;
+    margin-top: 21px;
+  }
+  .hero-container {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 197px;
+  }
+  .hero-list {
+    flex-direction: row;
+    gap: 198.1px;
+  }
+
+  .advantage {
+    padding: 0 340px;
+    display: flex;
+    gap: 130px;
+    align-items: center;
+    justify-content: center;
+  }
+  .advantage:first-child {
+    padding-top: 207px;
+  }
+  .advantage:last-child {
+    padding-top: 192px;
+    padding-bottom: 305px;
+  }
+  .advantage:last-child > .advantage-img {
+    order: 2;
+  }
+  .advantage:last-child > .advantage-info {
+    order: 1;
+  }
+  .advantage-img {
+    width: auto;
+    height: auto;
+  }
+  .advantage-btn {
+    padding: 16px 40.91px;
+  }
+
+  .slider {
+    padding-top: 127px;
+    background: url("./images/swiper-bg-desk.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  span {
+    display: inline;
+  }
+  .swiper {
+    margin-top: 44px;
+    width: 1433px;
+  }
+  .swiper-img {
+    width: 405px;
+    height: 257px;
+  }
+  .swiper-button-prev {
+    top: 16%;
+    left: 8%;
+  }
+  .swiper-button-next {
+    top: 16%;
+    right: 8%;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 40px;
+  }
+
+  .numbers-container {
+    margin-top: 886px;
+    padding: 201px 322px 224px;
+    width: 100%;
+  }
+  .numbers-title {
+    font-size: 60px;
+    line-height: 150%;
+  }
+  .numbers-text {
+    font-size: 18px;
+    max-width: 484px;
+    margin: 0 auto;
+    margin-top: 36.83px;
+    line-height: 28px;
+  }
+  .numbers-list {
+    margin-top: 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .numbers-list-item {
+    margin-top: 0 !important;
+  }
+
+  .benefits {
+    padding: 249px 0 257px;
+    background-image: url("./images/benefits-bg-desk.jpg");
+  }
+  .benefits-title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .benefits-text {
+    max-width: 470px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+  .benefits-btn {
+    margin-top: 36px;
+    padding: 18.5 56px;
+  }
+
+  .experience {
+    padding: 141px 0 210px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+      url("./images/experience-bg-desk.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .experience-title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .experience-video {
+    background-size: cover;
+    padding: 250px 480px;
+    width: 1056px;
+    height: 594;
+    margin: 0 auto;
+    margin-top: 67.2px;
+  }
+  .experience-video-btn {
+    width: 96px;
+    height: 96px;
+  }
+  .experience-list {
+    margin-top: 125px;
+    flex-direction: row;
+    gap: 75px;
+  }
+  .experience-list-item {
+    display: flex;
+    gap: 42px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .experience-list-title {
+    margin-top: 0;
+    font-size: 18px;
+  }
+  .experience-list-text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .gallery {
+    padding: 177px 0 229px;
+  }
+  .gallery-title {
+    font-size: 60px;
+    line-height: 150%;
+  }
+  .gallery-text {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 511px;
+    margin: 0 auto;
+    margin-top: 41.83px;
+  }
+  .gallery-list {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-auto-rows: 10px;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 71px;
+  }
+  .gallery-list-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 14;
+  }
+  .gallery-list-item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 15 / span 6;
+  }
+  .gallery-list-item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 6;
+  }
+  .gallery-list-item:nth-child(4) {
+    grid-column: 2;
+    grid-row: 7 / span 14;
+  }
+  .gallery-list-item:nth-child(5) {
+    grid-column: 3;
+    grid-row: 1 / span 10;
+  }
+  .gallery-list-item:nth-child(6) {
+    grid-column: 3;
+    grid-row: 11 / span 10;
+  }
 }
