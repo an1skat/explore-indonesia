@@ -27,7 +27,12 @@ const paragraphs = document.querySelectorAll(".tips-list-text");
 paragraphs.forEach((textEl) => {
   const btn = textEl.nextElementSibling;
 
-  if (!btn || !btn.classList.contains("show-more")) return;
+  if (
+    !btn ||
+    !btn.classList.contains("show-more") ||
+    window.getComputedStyle(btn).display === "none"
+  )
+    return;
 
   const fullText = textEl.textContent.trim();
   const words = fullText.split(/\s+/);

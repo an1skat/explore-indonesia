@@ -526,6 +526,7 @@ span {
 }
 .tips-list-item::before {
   content: counter(custom-counter);
+  display: inline-block;
   color: white;
   border-radius: 50%;
   background-color: rgb(221, 34, 66);
@@ -535,6 +536,7 @@ span {
   line-height: 38.15px;
   width: 56px;
   height: 56px;
+  flex-shrink: 0;
 }
 .tips-list-item:first-child::before {
   padding: 10px 23px;
@@ -559,6 +561,11 @@ span {
 }
 .tips-list-container {
   margin-top: 32px;
+}
+.tips-triangle {
+  border-top-width: 12px;
+  border-bottom-width: 12px;
+  border-left-width: 20px;
 }
 .show-more {
   border: none;
@@ -592,7 +599,7 @@ span {
   align-items: center;
   position: absolute;
   top: -52px;
-  left: 135px;
+  right: 135px;
   cursor: pointer;
 }
 .footer-nav-list {
@@ -619,13 +626,13 @@ span {
   line-height: 36.15px;
   letter-spacing: 0.65px;
 }
+
+/* DESKTOP */
 @media (min-width: 1420px) {
-  .header {
-    width: 100%;
-  }
   .container {
     width: 1490px;
   }
+  .header,
   .header > .container {
     width: 100%;
   }
@@ -874,5 +881,88 @@ span {
   .gallery-list-item:nth-child(6) {
     grid-column: 3;
     grid-row: 11 / span 10;
+  }
+
+  .show-more {
+    display: none;
+  }
+  .hidden {
+    display: block;
+  }
+  .tips {
+    padding: 118px 0;
+    text-align: left;
+  }
+  .tips-title {
+    font-size: 60px;
+    line-height: 150%;
+  }
+  .tips-list {
+    align-items: flex-start;
+    gap: 85px;
+  }
+  .tips-list-item {
+    display: flex;
+    gap: 44px;
+    position: relative;
+  }
+  .tips-list-item::after {
+    content: "";
+    position: absolute;
+    top: 56px;
+    left: 28px;
+    width: 2px;
+    height: calc(100% + 32px);
+    background-color: rgba(21, 20, 57, 0.4);
+    opacity: 0.3;
+    z-index: 0;
+  }
+  .tips-list-item:last-child::after {
+    display: none;
+  }
+  .tips-list-title {
+    margin-top: 15px;
+    font-size: 26.41px;
+    line-height: 41.08px;
+  }
+  .tips-list-text {
+    font-size: 23.47px;
+    line-height: 38.15px;
+  }
+  .tips-list-container {
+    display: flex;
+    margin-top: 94px;
+    align-items: flex-start;
+    gap: 45.48px;
+  }
+  .w-4 {
+    max-width: 446.02px;
+  }
+
+  .footer {
+    padding: 39px 0 31px;
+    width: 100%;
+  }
+  .footer > .container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .footer > .container > div {
+    display: flex;
+    align-items: center;
+  }
+  .footer > .container > div:first-child {
+    gap: 124px;
+  }
+  .footer > .container > div:last-child {
+    gap: 50px;
+  }
+  .footer-nav-item {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .footer-links-list {
+    gap: 22px;
   }
 }
