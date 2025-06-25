@@ -11,6 +11,13 @@
     justify-content: space-between;
     align-items: flex-start;
   }
+  &-container {
+    @include responsive($breakpoint-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+    }
+  }
 
   .nav-list {
     display: none;
@@ -19,11 +26,8 @@
       display: flex;
       gap: 62.1px;
 
-      .nav-list-item {
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 23px;
+      &-item {
+        @include text(white, 18px, 700, 23px);
         cursor: pointer;
       }
     }

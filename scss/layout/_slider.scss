@@ -7,12 +7,19 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  @include responsive($breakpoint-desktop) {
+    padding-top: 127px;
+    @include background(url("/images/swiper-bg-desk.jpg"));
+  }
 
   &-title {
     @include text(rgb(1, 10, 32), 40px, 700, 46px);
 
     span {
       display: block;
+      @include responsive($breakpoint-desktop) {
+        display: inline;
+      }
     }
   }
 
@@ -20,22 +27,37 @@
     margin-top: 23px;
     width: 100%;
     overflow: hidden;
+    @include responsive($breakpoint-desktop) {
+      margin-top: 44px;
+      width: 1433px;
+    }
 
     &-button-prev {
       color: #020b20;
       top: 12%;
       transition: color 250ms;
       left: 0;
+      @include responsive($breakpoint-desktop) {
+        top: 16%;
+        left: 8%;
+      }
     }
     &-button-next {
       color: #020b20;
       top: 12%;
       transition: color 250ms;
       right: 0;
+      @include responsive($breakpoint-desktop) {
+        top: 16%;
+        right: 8%;
+      }
     }
     &-button-prev::after,
     &-button-next::after {
       @include text(#020b20, 24px, 1000);
+      @include responsive($breakpoint-desktop) {
+        font-size: 40px;
+      }
     }
     &-pagination {
       top: auto !important;
@@ -60,6 +82,14 @@
       width: 314px;
       height: 200px;
       border-radius: 10px;
+      @include responsive($breakpoint-desktop) {
+        width: 405px;
+        height: 257px;
+        @include responsive($breakpoint-desktop) {
+          top: 16%;
+          left: 8%;
+        }
+      }
     }
   }
 
@@ -68,20 +98,48 @@
       margin-top: 695px;
       padding: 72px 30px 69px;
       background-color: rgba(2, 12, 33, 0.9);
+      @include responsive($breakpoint-desktop) {
+        margin-top: 886px;
+        padding: 201px 322px 224px;
+        width: 100%;
+      }
     }
 
     &-title {
       @extend .slider-title;
       color: white;
+      @include responsive($breakpoint-desktop) {
+        font-size: 60px;
+        line-height: 150%;
+      }
     }
 
     &-text {
       @include text($text-color, 16px, 400, 24px, 0.5px);
       margin-top: 57px;
+      @include responsive($breakpoint-desktop) {
+        font-size: 18px;
+        max-width: 484px;
+        margin: 0 auto;
+        margin-top: 36.83px;
+        line-height: 28px;
+      }
     }
 
     &-list {
       margin-top: 62px;
+      @include responsive($breakpoint-desktop) {
+        margin-top: 39px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      &-item {
+        @include responsive($breakpoint-desktop) {
+          margin-top: 0 !important;
+        }
+      }
 
       &-item:nth-child(2) {
         margin-top: 81px;

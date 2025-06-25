@@ -3,13 +3,27 @@
 .gallery {
   padding: 32px 0 40px;
   text-align: center;
+  @include responsive($breakpoint-desktop) {
+    padding: 177px 0 229px;
+  }
 
   &-title {
     @include text(black, 40px, 700, 46px);
+    @include responsive($breakpoint-desktop) {
+      font-size: 60px;
+      line-height: 150%;
+    }
   }
 
   &-text {
     @include text(rgb(111, 119, 135), 16px, 400, 24px, 0.5px);
+    @include responsive($breakpoint-desktop) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 511px;
+      margin: 0 auto;
+      margin-top: 41.83px;
+    }
   }
 
   &-list {
@@ -18,30 +32,60 @@
     grid-auto-rows: 75px;
     justify-content: center;
     gap: 12px;
+    @include responsive($breakpoint-desktop) {
+      grid-template-columns: repeat(3, 370px);
+      grid-auto-rows: 10px;
+      gap: 30px;
+      margin-top: 71px;
+    }
 
     &-item:nth-child(1) {
       grid-column: 1;
       grid-row: span 3;
+      @include responsive($breakpoint-desktop) {
+        grid-column: 1;
+        grid-row: 1 / span 14;
+      }
     }
     &-item:nth-child(2) {
       grid-column: 1;
       grid-row: 4 / span 1;
+      @include responsive($breakpoint-desktop) {
+        grid-column: 1;
+        grid-row: 15 / span 6;
+      }
     }
     &-item:nth-child(3) {
       grid-column: 2;
       grid-row: 1 / span 1;
+      @include responsive($breakpoint-desktop) {
+        grid-column: 2;
+        grid-row: 1 / span 6;
+      }
     }
     &-item:nth-child(4) {
       grid-column: 2;
       grid-row: 2 / span 3;
+      @include responsive($breakpoint-desktop) {
+        grid-column: 2;
+        grid-row: 7 / span 14;
+      }
     }
     &-item:nth-child(5) {
       grid-column: 1;
       grid-row: 5 / span 2;
+      @include responsive($breakpoint-desktop) {
+        grid-column: 3;
+        grid-row: 1 / span 10;
+      }
     }
     &-item:nth-child(6) {
       grid-column: 2;
       grid-row: 5 / span 2;
+      @include responsive($breakpoint-desktop) {
+        grid-column: 3;
+        grid-row: 11 / span 10;
+      }
     }
   }
 

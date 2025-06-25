@@ -4,9 +4,17 @@
   padding: 29px 0 73px;
   background: rgb(220, 232, 242);
   text-align: center;
+  @include responsive($breakpoint-desktop) {
+    padding: 118px 0;
+    text-align: left;
+  }
 
   &-title {
     @include text(rgb(1, 10, 32), 40px, 700, 46px);
+    @include responsive($breakpoint-desktop) {
+      font-size: 60px;
+      line-height: 150%;
+    }
   }
 
   &-list {
@@ -18,9 +26,18 @@
     gap: 32px;
     align-items: center;
     padding: 0;
+    @include responsive($breakpoint-desktop) {
+      align-items: flex-start;
+      gap: 85px;
+    }
 
     &-item {
       counter-increment: custom-counter;
+      @include responsive($breakpoint-desktop) {
+        display: flex;
+        gap: 44px;
+        position: relative;
+      }
 
       &::before {
         content: counter(custom-counter);
@@ -36,16 +53,41 @@
       &:first-child::before {
         padding: 10px 23px;
       }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 56px;
+        left: 28px;
+        width: 2px;
+        height: calc(100% + 32px);
+        background-color: rgba(21, 20, 57, 0.4);
+        opacity: 0.3;
+        z-index: 0;
+      }
+      &:last-child::after {
+        display: none;
+      }
     }
 
     &-title {
       @include text(rgb(1, 10, 32), 22px, 700, 150%);
       margin-top: 26px;
+      @include responsive($breakpoint-desktop) {
+        margin-top: 15px;
+        font-size: 26.41px;
+        line-height: 41.08px;
+      }
     }
 
     &-text {
       @extend .gallery-text;
+      margin: 0;
       margin-top: 13px;
+      @include responsive($breakpoint-desktop) {
+        font-size: 23.47px;
+        line-height: 38.15px;
+      }
     }
     .shortened {
       display: block;
@@ -57,9 +99,18 @@
     }
     &-container {
       margin-top: 32px;
+      @include responsive($breakpoint-desktop) {
+        display: flex;
+        margin-top: 94px;
+        align-items: flex-start;
+        gap: 45.48px;
+      }
 
       .w-4 {
         width: 100%;
+        @include responsive($breakpoint-desktop) {
+          max-width: 446.02px;
+        }
       }
     }
   }
@@ -77,4 +128,7 @@
   cursor: pointer;
   font-weight: 500;
   margin-top: 8px;
+  @include responsive($breakpoint-desktop) {
+    display: none;
+  }
 }

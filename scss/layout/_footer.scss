@@ -4,9 +4,31 @@
   padding: 146px 0 84px;
   background-color: #010a20;
   position: relative;
+  @include responsive($breakpoint-desktop) {
+    padding: 39px 0 31px;
+    width: 100%;
+  }
 
   > .container {
     @include flex-center(column, 36px);
+    @include responsive($breakpoint-desktop) {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+    }
+    > div {
+      @include responsive($breakpoint-desktop) {
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+          gap: 124px;
+        }
+        &:last-child {
+          gap: 50px;
+        }
+      }
+    }
   }
 
   .scroll-to-up {
@@ -26,18 +48,32 @@
   &-nav-list {
     @include flex-center(column, 36px);
     margin-top: 36px;
+    @include responsive($breakpoint-desktop) {
+      flex-direction: row;
+      margin-top: 0;
+    }
   }
 
   &-nav-item {
     @include text(white, 23px, 700, 35.69px, 0.64px);
+    @include responsive($breakpoint-desktop) {
+      cursor: pointer;
+      font-size: 18px;
+    }
   }
 
   &-links-list {
     @include flex-center(row, 48.41px);
+    @include responsive($breakpoint-desktop) {
+      gap: 22px;
+    }
   }
 
   &-copyright {
     @include text(white, 23.24px, 700, 36.15px, 0.65px);
     margin-top: 36px;
+    @include responsive($breakpoint-desktop) {
+      margin-top: 0;
+    }
   }
 }

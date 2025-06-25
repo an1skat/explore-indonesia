@@ -8,8 +8,21 @@
       rgba(0, 0, 0, 0.31) 20.027%,
       rgba(0, 0, 0, 0.29) 99.033%
     ),
-    url("../images/hero-bg-mob.jpg")
+    url("/images/hero-bg-mob.jpg")
   );
+  @include responsive($breakpoint-desktop) {
+    padding: 0;
+    padding-top: 266px;
+    @include background(
+      linear-gradient(
+        192.53deg,
+        rgba(0, 0, 0, 0.31) 20.027%,
+        rgba(0, 0, 0, 0.29) 99.033%
+      ),
+      url("/images/hero-bg-desk.jpg")
+    );
+  }
+
   &-title {
     @include text(white, 58.15px);
     font-family: $font-secondary;
@@ -30,6 +43,7 @@
     @include responsive($breakpoint-desktop) {
       padding: 26px 64px;
       font-size: 20px;
+      line-height: 150%;
       height: 82px;
       margin-top: 21px;
     }
@@ -55,6 +69,7 @@
     @include responsive($breakpoint-desktop) {
       flex-direction: row;
       gap: 198.1px;
+      margin: 0;
     }
 
     &-item {

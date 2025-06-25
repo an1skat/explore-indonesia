@@ -4,17 +4,36 @@
   padding: 125px 0 116px;
   @include background(url("/images/benefits-bg-mob.jpg"));
   text-align: center;
+  @include responsive($breakpoint-desktop) {
+    padding: 249px 0 257px;
+    @include background(url("/images/benefits-bg-desk.jpg"));
+  }
 
   &-title {
     @include text(black, 40px, 700, 46px);
+    @include responsive($breakpoint-desktop) {
+      font-size: 42px;
+      line-height: 50px;
+    }
   }
 
   &-text {
     @include text(rgb(111, 119, 135), 16px, 400, 24px, 0.5px);
     margin-top: 36px;
+    @include responsive($breakpoint-desktop) {
+      max-width: 470px;
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0 auto;
+      margin-top: 32px;
+    }
   }
 
   &-btn {
     margin-top: 41px;
+    @include responsive($breakpoint-desktop) {
+      margin-top: 36px;
+      padding: 18.5 56px;
+    }
   }
 }

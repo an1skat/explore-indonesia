@@ -75,4 +75,7 @@ img {
 
 .hidden {
   display: none;
+  @include responsive($breakpoint-desktop) {
+    display: block;
+  }
 }
