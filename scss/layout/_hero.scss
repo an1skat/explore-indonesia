@@ -8,7 +8,7 @@
       rgba(0, 0, 0, 0.31) 20.027%,
       rgba(0, 0, 0, 0.29) 99.033%
     ),
-    url("./images/hero-bg-mob.jpg")
+    url("../images/hero-bg-mob.jpg")
   );
   @include responsive($breakpoint-desktop) {
     padding: 0;
@@ -19,7 +19,7 @@
         rgba(0, 0, 0, 0.31) 20.027%,
         rgba(0, 0, 0, 0.29) 99.033%
       ),
-      url("./images/hero-bg-desk.jpg")
+      url("../images/hero-bg-desk.jpg")
     );
   }
 

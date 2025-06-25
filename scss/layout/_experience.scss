@@ -4,14 +4,14 @@
   padding: 83px 0 37px;
   @include background(
     linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
-    url("./images/experience-bg-mob.png")
+    url("../images/experience-bg-mob.png")
   );
   text-align: center;
   @include responsive($breakpoint-desktop) {
     padding: 141px 0 210px;
     @include background(
       linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
-      url("./images/experience-bg-desk.jpg")
+      url("../images/experience-bg-desk.jpg")
     );
   }
 
@@ -24,7 +24,7 @@
   }
 
   &-video {
-    @include background(url("./images/experience-video.jpg"), null, contain);
+    @include background(url("../images/experience-video.jpg"), null, contain);
     @include flex-center();
     padding: 62px 124px;
     border-radius: 10px;
