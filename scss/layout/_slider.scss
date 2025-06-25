@@ -2,14 +2,14 @@
 
 .slider {
   padding-top: 25px;
-  @include background(url("/images/swiper-bg-mob.jpg"));
+  @include background(url("./images/swiper-bg-mob.jpg"));
   text-align: center;
   width: 100%;
   overflow: hidden;
   position: relative;
   @include responsive($breakpoint-desktop) {
     padding-top: 127px;
-    @include background(url("/images/swiper-bg-desk.jpg"));
+    @include background(url("./images/swiper-bg-desk.jpg"));
   }
 
   &-title {

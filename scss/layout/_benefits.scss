@@ -2,11 +2,11 @@
 
 .benefits {
   padding: 125px 0 116px;
-  @include background(url("/images/benefits-bg-mob.jpg"));
+  @include background(url("./images/benefits-bg-mob.jpg"));
   text-align: center;
   @include responsive($breakpoint-desktop) {
     padding: 249px 0 257px;
-    @include background(url("/images/benefits-bg-desk.jpg"));
+    @include background(url("./images/benefits-bg-desk.jpg"));
   }
 
   &-title {
