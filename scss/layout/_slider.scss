@@ -1,0 +1,104 @@
+// _slider.scss
+
+.slider {
+  padding-top: 25px;
+  @include background(url("/images/swiper-bg-mob.jpg"));
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &-title {
+    @include text(rgb(1, 10, 32), 40px, 700, 46px);
+
+    span {
+      display: block;
+    }
+  }
+
+  .swiper {
+    margin-top: 23px;
+    width: 100%;
+    overflow: hidden;
+
+    &-button-prev {
+      color: #020b20;
+      top: 12%;
+      transition: color 250ms;
+      left: 0;
+    }
+    &-button-next {
+      color: #020b20;
+      top: 12%;
+      transition: color 250ms;
+      right: 0;
+    }
+    &-button-prev::after,
+    &-button-next::after {
+      @include text(#020b20, 24px, 1000);
+    }
+    &-pagination {
+      top: auto !important;
+      bottom: auto !important;
+      margin-top: 16px;
+
+      &-bullet {
+        width: 16.48px;
+        height: 16.48px;
+        opacity: 1;
+        background: rgb(133, 163, 178);
+
+        &-active {
+          background: $accent-color;
+        }
+      }
+    }
+    &-slide {
+      @include flex-center();
+    }
+    &-img {
+      width: 314px;
+      height: 200px;
+      border-radius: 10px;
+    }
+  }
+
+  .numbers {
+    &-container {
+      margin-top: 695px;
+      padding: 72px 30px 69px;
+      background-color: rgba(2, 12, 33, 0.9);
+    }
+
+    &-title {
+      @extend .slider-title;
+      color: white;
+    }
+
+    &-text {
+      @include text($text-color, 16px, 400, 24px, 0.5px);
+      margin-top: 57px;
+    }
+
+    &-list {
+      margin-top: 62px;
+
+      &-item:nth-child(2) {
+        margin-top: 81px;
+      }
+      &-item:last-child {
+        margin-top: 44px;
+      }
+
+      &-title {
+        @extend .slider-title;
+        color: $accent-color;
+      }
+
+      &-text {
+        @extend .numbers-text;
+        margin-top: 0;
+      }
+    }
+  }
+}

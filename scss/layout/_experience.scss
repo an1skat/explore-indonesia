@@ -1,0 +1,61 @@
+// _experience.scss
+
+.experience {
+  padding: 83px 0 37px;
+  @include background(
+    linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)),
+    url("/images/experience-bg-mob.png")
+  );
+  text-align: center;
+
+  &-title {
+    @include text(white, 40px, 700, 46px);
+  }
+
+  &-video {
+    @include background(url("/images/experience-video.jpg"), null, contain);
+    @include flex-center();
+    padding: 62px 124px;
+    border-radius: 10px;
+    margin-top: 115px;
+
+    &-btn {
+      background-color: rgb(233, 58, 125);
+    }
+  }
+  &-triangle {
+    border-left-color: white;
+  }
+
+  &-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &-title {
+      @include text(white, 22px, 700, 150%);
+      margin-top: 36px;
+    }
+
+    &-text {
+      @include text($text-color, 16px, 400, 24px, 0.5px);
+      margin-top: 17px;
+    }
+  }
+
+  &-img-container {
+    position: relative;
+
+    .abs {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-img {
+    border-radius: 10px;
+    position: relative;
+  }
+}

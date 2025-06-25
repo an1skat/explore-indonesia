@@ -96,6 +96,7 @@ img {
 .header {
   position: absolute;
   padding: 48px 0;
+  width: 100%;
 }
 .header > .container,
 .icons-container {
@@ -289,13 +290,15 @@ span {
 }
 .swiper-button-prev {
   color: #020b20;
-  /* left: 0 !important; */
+  top: 12%;
   transition: color 250ms;
+  left: 0;
 }
 .swiper-button-next {
   color: #020b20;
-  /* right: 0 !important; */
+  top: 12%;
   transition: color 250ms;
+  right: 0;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -631,10 +634,6 @@ span {
 @media (min-width: 1420px) {
   .container {
     width: 1490px;
-  }
-  .header,
-  .header > .container {
-    width: 100%;
   }
   .header-container {
     display: flex;

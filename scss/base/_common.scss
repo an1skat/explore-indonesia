@@ -1,0 +1,78 @@
+// _common.scss
+
+body {
+  font-family: $font-main;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  border: none;
+  background-color: $accent-color;
+  padding: 22.5px 108px;
+  @include text(white, 18px, 700);
+  border-radius: 40px;
+  transition: background-color 250ms, color 250ms;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: $accent-color;
+  }
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}

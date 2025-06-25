@@ -1,0 +1,55 @@
+// _components.scss
+
+// Video Button
+.video-btn {
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &--white {
+    background-color: white;
+    padding: 21px 20px 19px 23px;
+  }
+
+  &--pink {
+    background-color: rgb(233, 58, 125);
+  }
+
+  &--large {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+// Custom Counter List
+.counter-list {
+  counter-reset: custom-counter;
+  list-style: none;
+  padding: 0;
+
+  &-item {
+    counter-increment: custom-counter;
+    position: relative;
+
+    &::before {
+      content: counter(custom-counter);
+    }
+
+    &--circle::before {
+      display: inline-block;
+      color: white;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      padding: 10px 20px;
+      font-size: 26.41px;
+      font-weight: 500;
+      line-height: 38.15px;
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+  }
+}

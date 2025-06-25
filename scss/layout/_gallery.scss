@@ -1,0 +1,55 @@
+// _gallery.scss
+
+.gallery {
+  padding: 32px 0 40px;
+  text-align: center;
+
+  &-title {
+    @include text(black, 40px, 700, 46px);
+  }
+
+  &-text {
+    @include text(rgb(111, 119, 135), 16px, 400, 24px, 0.5px);
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(2, 151px);
+    grid-auto-rows: 75px;
+    justify-content: center;
+    gap: 12px;
+
+    &-item:nth-child(1) {
+      grid-column: 1;
+      grid-row: span 3;
+    }
+    &-item:nth-child(2) {
+      grid-column: 1;
+      grid-row: 4 / span 1;
+    }
+    &-item:nth-child(3) {
+      grid-column: 2;
+      grid-row: 1 / span 1;
+    }
+    &-item:nth-child(4) {
+      grid-column: 2;
+      grid-row: 2 / span 3;
+    }
+    &-item:nth-child(5) {
+      grid-column: 1;
+      grid-row: 5 / span 2;
+    }
+    &-item:nth-child(6) {
+      grid-column: 2;
+      grid-row: 5 / span 2;
+    }
+  }
+
+  &-img {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

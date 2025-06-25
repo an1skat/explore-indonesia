@@ -1,0 +1,43 @@
+// _footer.scss
+
+.footer {
+  padding: 146px 0 84px;
+  background-color: #010a20;
+  position: relative;
+
+  > .container {
+    @include flex-center(column, 36px);
+  }
+
+  .scroll-to-up {
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(221, 34, 66);
+    padding: 41px 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -52px;
+    right: 135px;
+    cursor: pointer;
+  }
+
+  &-nav-list {
+    @include flex-center(column, 36px);
+    margin-top: 36px;
+  }
+
+  &-nav-item {
+    @include text(white, 23px, 700, 35.69px, 0.64px);
+  }
+
+  &-links-list {
+    @include flex-center(row, 48.41px);
+  }
+
+  &-copyright {
+    @include text(white, 23.24px, 700, 36.15px, 0.65px);
+    margin-top: 36px;
+  }
+}

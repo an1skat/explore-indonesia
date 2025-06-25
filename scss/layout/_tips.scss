@@ -1,0 +1,80 @@
+// _tips.scss
+
+.tips {
+  padding: 29px 0 73px;
+  background: rgb(220, 232, 242);
+  text-align: center;
+
+  &-title {
+    @include text(rgb(1, 10, 32), 40px, 700, 46px);
+  }
+
+  &-list {
+    list-style: none;
+    counter-reset: custom-counter;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    padding: 0;
+
+    &-item {
+      counter-increment: custom-counter;
+
+      &::before {
+        content: counter(custom-counter);
+        display: inline-block;
+        border-radius: 50%;
+        background-color: rgb(221, 34, 66);
+        padding: 10px 20px;
+        @include text(white, 26.41px, 500, 38.15px);
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+      }
+      &:first-child::before {
+        padding: 10px 23px;
+      }
+    }
+
+    &-title {
+      @include text(rgb(1, 10, 32), 22px, 700, 150%);
+      margin-top: 26px;
+    }
+
+    &-text {
+      @extend .gallery-text;
+      margin-top: 13px;
+    }
+    .shortened {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .shortened::after {
+      content: "...";
+    }
+    &-container {
+      margin-top: 32px;
+
+      .w-4 {
+        width: 100%;
+      }
+    }
+  }
+  &-triangle {
+    border-top-width: 12px;
+    border-bottom-width: 12px;
+    border-left-width: 20px;
+  }
+}
+.show-more {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: rgb(221, 34, 66);
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 8px;
+}

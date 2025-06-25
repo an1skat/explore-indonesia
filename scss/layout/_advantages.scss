@@ -1,0 +1,72 @@
+// _advantage.scss
+
+.advantage {
+  padding: 0 30px;
+
+  &:first-child {
+    padding-top: 40px;
+    @include background(
+      linear-gradient(0deg, rgb(1, 10, 32) 0%, rgba(1, 10, 32, 0.9) 100%),
+      url("../images/advantage1.jpg")
+    );
+  }
+
+  &:last-child {
+    padding-top: 56px;
+    padding-bottom: 48px;
+    @include background(
+      linear-gradient(180deg, rgb(1, 10, 32) 0%, rgba(1, 10, 32, 0.9) 100%),
+      url("../images/advantage2.jpg")
+    );
+  }
+
+  &-img {
+    width: 314px;
+    height: 232px;
+    border-radius: 10px;
+
+    @include responsive($breakpoint-desktop) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &-title {
+    @include text(white, 40px, 700, 46px);
+    margin-top: 34px;
+  }
+
+  &-text {
+    @include text($text-color, 16px, 400, 24px);
+    margin-top: 30px;
+  }
+
+  &-btn {
+    margin-top: 39px;
+  }
+
+  @include responsive($breakpoint-desktop) {
+    padding: 0 340px;
+    display: flex;
+    gap: 130px;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      padding-top: 207px;
+    }
+
+    &:last-child {
+      padding-top: 192px;
+      padding-bottom: 305px;
+
+      > .advantage-img {
+        order: 2;
+      }
+
+      > .advantage-info {
+        order: 1;
+      }
+    }
+  }
+}

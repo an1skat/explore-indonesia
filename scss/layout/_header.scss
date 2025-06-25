@@ -1,0 +1,44 @@
+// _header.scss
+
+.header {
+  position: absolute;
+  padding: 48px 0;
+  width: 100%;
+
+  > .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    display: none;
+
+    @include responsive($breakpoint-desktop) {
+      display: flex;
+      gap: 62.1px;
+
+      .nav-list-item {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 23px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .icons-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .icons-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+}

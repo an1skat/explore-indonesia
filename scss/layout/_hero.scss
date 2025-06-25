@@ -1,0 +1,99 @@
+// _hero.scss
+
+.hero {
+  padding: 153px 0 40px;
+  @include background(
+    linear-gradient(
+      192.53deg,
+      rgba(0, 0, 0, 0.31) 20.027%,
+      rgba(0, 0, 0, 0.29) 99.033%
+    ),
+    url("../images/hero-bg-mob.jpg")
+  );
+  &-title {
+    @include text(white, 58.15px);
+    font-family: $font-secondary;
+    line-height: 63px;
+
+    @include responsive($breakpoint-desktop) {
+      font-size: 120px;
+      line-height: 130px;
+    }
+  }
+
+  &-btn {
+    margin-top: 8px;
+    height: 59px;
+    @include flex-center();
+    padding: 21.5px 90.5px;
+
+    @include responsive($breakpoint-desktop) {
+      padding: 26px 64px;
+      font-size: 20px;
+      height: 82px;
+      margin-top: 21px;
+    }
+  }
+
+  &-container {
+    @include responsive($breakpoint-desktop) {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 197px;
+    }
+  }
+
+  &-list {
+    counter-reset: custom-counter;
+    padding: 35px 72px 30px 32px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 54px;
+
+    @include responsive($breakpoint-desktop) {
+      flex-direction: row;
+      gap: 198.1px;
+    }
+
+    &-item {
+      counter-increment: custom-counter;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &::before {
+        content: counter(custom-counter, decimal-leading-zero);
+        color: $accent-color;
+        font-family: $font-secondary;
+        line-height: 19px;
+      }
+    }
+
+    &-title {
+      @include text(white, 26px, 700, 41px);
+    }
+
+    &-text {
+      @include text(rgb(147, 147, 147), 16px, 400, 24px, 0.5px);
+    }
+  }
+
+  &-video {
+    background-image: url("../images/hero-video.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 66px 128px;
+
+    &-btn {
+      @extend .video-btn;
+      @extend .video-btn--white;
+    }
+  }
+  &-triangle {
+    @extend %triangle;
+  }
+}

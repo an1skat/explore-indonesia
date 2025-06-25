@@ -1,0 +1,21 @@
+// Utils
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/placeholders";
+// Components
+@import "components/components";
+
+// Base
+@import "base/common";
+@import "base/container";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/hero";
+@import "layout/advantages";
+@import "layout/slider";
+@import "layout/benefits";
+@import "layout/experience";
+@import "layout/gallery";
+@import "layout/tips";

@@ -1,0 +1,36 @@
+// _mixins.scss
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin text(
+  $color,
+  $size,
+  $weight: 400,
+  $line-height: normal,
+  $letter-spacing: normal
+) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin background($background-gradient, $background-image: null, $size: cover) {
+  background: $background-gradient, $background-image;
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin responsive($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

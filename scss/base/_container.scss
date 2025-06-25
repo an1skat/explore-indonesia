@@ -1,0 +1,11 @@
+// _container.scss
+
+.container {
+  width: 375px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @include responsive($breakpoint-desktop) {
+    width: 1490px;
+  }
+}
